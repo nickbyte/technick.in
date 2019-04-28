@@ -37,13 +37,8 @@ function Bio() {
                 borderRadius: `50%`,
               }}
             />
-            <p>
-              Written by <strong>{author}</strong> who lives and works in San
-              Francisco building useful things.
-              {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
-              </a>
+            <p>Personal blog of <strong><a href={`https://twitter.com/${social.twitter}`}>{author}</a>.<br/>
+</strong> Software Engineer, UI/UX Geek, Code vigilante.   
             </p>
           </div>
         )
@@ -51,7 +46,6 @@ function Bio() {
     />
   )
 }
-
 const bioQuery = graphql`
   query BioQuery {
     avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
